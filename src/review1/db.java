@@ -17,11 +17,10 @@ public class db {
     PreparedStatement pst;
     Connection connection;
 
-       static String serverName = "sql12.freemysqlhosting.net";
-    static String mydatabase = "sql12263901";
+       static String serverName = "db144.hostinger.in.th";
+    static String mydatabase = "u300081131_rev";
     static String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
-    static String username = "sql12263901";
-    static String password = "dsfYKSZBwz";
-    
+    static String username = "u300081131_rev";
+    static String password = "password0880";
     
 }

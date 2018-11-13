@@ -69,7 +69,7 @@ public class Index1 extends javax.swing.JFrame {
         jLabel1.setText("Restaurant Review");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/review1/45167938_2171638419830989_450212688308469760_n.jpg"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/โจ๊กหมูทอง.png"))); // NOI18N
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jButton1.setInheritsPopupMenu(true);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class Index1 extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 480, 360, 270));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/review1/ตำอีหลีอีหลอ (2).jpg"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ตำอีหลีอีหลอ.jpg"))); // NOI18N
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,7 +89,7 @@ public class Index1 extends javax.swing.JFrame {
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 470, 370, 270));
 
         jButton4.setBackground(new java.awt.Color(235, 235, 248));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/review1/โจ๊กหมูทอง.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/บิงซู น้ำแข็งใสเกาหลี.jpg"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -97,7 +97,7 @@ public class Index1 extends javax.swing.JFrame {
         });
         jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, 360, 224));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/review1/ก๋วยเตี๋ยวต้มยำไช่สะดุ้ง.jpg"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ก๋วยเตี๋ยวต้มยำไช่สะดุ้ง.jpg"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -243,9 +243,10 @@ public class Index1 extends javax.swing.JFrame {
 
     private void nextbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextbtnActionPerformed
         setVisible(false);
+        countIDRestaurant = countIDRestaurant + 4;
         Index1 change = new Index1(countIDRestaurant);
         change.setVisible(true);
-        countIDRestaurant = countIDRestaurant + 4;
+
     }//GEN-LAST:event_nextbtnActionPerformed
 
     private void name1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_name1AncestorAdded
@@ -302,11 +303,15 @@ public class Index1 extends javax.swing.JFrame {
     }//GEN-LAST:event_name4ActionPerformed
 
     private void backbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtn1ActionPerformed
-       /*  setVisible(false);
-        
-              countIDRestaurant = countIDRestaurant - 4;
-        Index1 change = new Index1(countIDRestaurant);
-     change.setVisible(true);*/
+        if (countIDRestaurant > 1) {
+            setVisible(false);
+            countIDRestaurant = countIDRestaurant - 4;
+            Index1 change = new Index1(countIDRestaurant);
+            change.setVisible(true);
+        } else {
+
+        }
+
     }//GEN-LAST:event_backbtn1ActionPerformed
 
     public static String getname(int x) throws SQLException {

@@ -20,11 +20,11 @@ import java.util.ArrayList;
  */
 public class ReviewPostDao {
 
-    static String serverName = "sql12.freemysqlhosting.net";
-    static String mydatabase = "sql12263901";
+    static String serverName = "db144.hostinger.in.th";
+    static String mydatabase = "u300081131_rev";
     static String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
-    static String username = "sql12263901";
-    static String password = "dsfYKSZBwz";
+    static String username = "u300081131_rev";
+    static String password = "password0880";
 
     public static boolean addPointAndCount(int IDrestaurant, int count, int point) throws SQLException {
         PreparedStatement pst;
@@ -102,9 +102,9 @@ public class ReviewPostDao {
         return pointdatabase;
     }
     
-    public ArrayList<Restaurant> getAllRestaurant(  ) throws SQLException {
+public ArrayList<Restaurant> getAllRestaurant() throws SQLException {
        
-        Restaurant restaurant = new Restaurant();
+        Restaurant restaurant;
         PreparedStatement pst;
         Connection connection;
         connection = DriverManager.getConnection(url, username, password);
@@ -116,12 +116,11 @@ public class ReviewPostDao {
         ResultSet rs = st.executeQuery(countfromdatabase);
         if (rs.next()) {
 
-          //  res = rs.getObject();        
+            res.add(new Restaurant(rs.getInt("idRestaurant"), rs.getString("NameRestaurant"), rs.getString("AddressRestaurant"), rs.getString("DescribtionRestaurant"), rs.getFloat("Longtitude"), rs.getFloat("Latitude"), rs.getInt("Point"), rs.getInt("Count")));
 
         }
         return res;
     }
-    
     
 
 }
